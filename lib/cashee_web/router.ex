@@ -7,5 +7,8 @@ defmodule CasheeWeb.Router do
 
   scope "/api", CasheeWeb do
     pipe_through :api
+
+    get "/data/:key", DataController, :show
+    put "/data", DataController, :update
   end
 end

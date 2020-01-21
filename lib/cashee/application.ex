@@ -7,6 +7,8 @@ defmodule Cashee.Application do
 
   def start(_type, _args) do
     # List all child processes to be supervised
+    :ets.new(:cache, [:named_table, :public])
+
     children = [
       # Start the endpoint when the application starts
       CasheeWeb.Endpoint

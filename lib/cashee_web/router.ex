@@ -9,6 +9,6 @@ defmodule CasheeWeb.Router do
     pipe_through :api
 
     get "/data/:key", DataController, :show
-    put "/data", DataController, :update
+    put "/data/:key", DataController, :update
   end
 end
